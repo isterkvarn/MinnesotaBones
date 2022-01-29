@@ -8,7 +8,7 @@
 [ext_resource path="res://assets/torch/torch4.png" type="Texture" id=6]
 [ext_resource path="res://assets/torch/torch6.png" type="Texture" id=7]
 [ext_resource path="res://assets/torch/torch5.png" type="Texture" id=8]
-[ext_resource path="res://assets/torch/light.png" type="Texture" id=9]
+[ext_resource path="res://assets/torch/light2.png" type="Texture" id=9]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -22,11 +22,11 @@ animations = [ {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="Light2D" type="Light2D" parent="."]
 texture = ExtResource( 9 )
 color = Color( 0.980392, 0.862745, 0.764706, 1 )
-energy = 0.5
+energy = 0.8
 shadow_enabled = true
