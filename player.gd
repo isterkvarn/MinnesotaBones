@@ -24,7 +24,7 @@ func _process(delta):
 	if Input.is_action_pressed("move_right"):
 		vel.x = move_speed
 		
-	# play right animation depending on movement
+	# play right animationdepending on movement
 	if is_on_floor():
 		if vel.length() > 0:
 			sprite.play("walk")
