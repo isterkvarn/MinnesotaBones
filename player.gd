@@ -54,9 +54,10 @@ func _process(delta):
 		sprite.flip_h = true
 
 	move_and_slide(vel, Vector2.UP, false, 4, 0.785398, false)
-
+	
+	# Check every object that is currently colliding with the player
 	for i in get_slide_count():
 		var collision = get_slide_collision(i)
+		# If the collision is a body, apply an impulse force to it
 		if collision.collider.is_in_group("bodies"):
-			print("body")
 			collision.collider.apply_central_impulse(-collision.normal * 100)
