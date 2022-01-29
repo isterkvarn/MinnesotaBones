@@ -9,5 +9,5 @@ func _ready():
 	set_can_sleep(true)
 	# Set the gravity scale
 	set_gravity_scale(gravity)
-	set_continuous_collision_detection_mode(1)
+	set_continuous_collision_detection_mode(2)
 	
