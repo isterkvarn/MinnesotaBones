@@ -24,8 +24,8 @@ func _process(delta):
 	if Input.is_action_pressed("move_right"):
 		vel.x = move_speed
 		
-	# play right animationdepending on movement
-	if is_on_floor() or (is_on_wall() and vel.y == 0):
+	# play right animation depending on movement
+	if is_on_floor():
 		if vel.length() > 0:
 			sprite.play("walk")
 		else:
@@ -52,7 +52,14 @@ func _process(delta):
 		sprite.flip_h = false
 	elif vel.x < 0:
 		sprite.flip_h = true
-
+	else:
+		# Makes it so you can change direvtion while squating
+		if Input.is_action_pressed("move_left"):
+			sprite.flip_h = true
+		if Input.is_action_pressed("move_right"):
+			sprite.flip_h = false
+			
+			
 	move_and_slide(vel, Vector2.UP, false, 4, 0.785398, false)
 	
 	# Check every object that is currently colliding with the player
