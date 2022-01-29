@@ -1,7 +1,8 @@
 extends KinematicBody2D
 
-const move_speed = 100
-const jump_force = 100
+const move_speed = 200
+const jump_force = 500
+const gravity = 20
 var vel = Vector2(0, 0)
 
 onready var sprite = $AnimatedSprite
@@ -23,23 +24,30 @@ func _process(delta):
 	if Input.is_action_pressed("move_right"):
 		vel.x = move_speed
 		
-	# Play walk animation of moving, otherwise idel
-	if vel.length() > 0:
-		sprite.play("walk")
-		sprite.playing = true
+	# play right animationdepending on movement
+	if is_on_floor():
+		if vel.length() > 0.5:
+			sprite.play("walk")
+		else:
+			sprite.play("idel")
+			sprite.frame = 0
+		# No gravity if on ground
+		vel.y = 0
 	else:
-		sprite.play("idel")
-		sprite.playing = false
-		sprite.frame = 0
+		# gravity and jump anmi if in air
+		vel.y += gravity
+		sprite.play("jump")
 	
 	# Squat and stop player while holding jump
-	if Input.is_action_pressed("jump"):
+	if Input.is_action_pressed("jump") and is_on_floor():
 		vel.x = 0
 		sprite.play("squat")
 		
-	if Input.is_action_just_released("jump"):
+	# Jump when button is released
+	if Input.is_action_just_released("jump") and is_on_floor():
 		vel.y -= jump_force
 		
+	# Flip sprite in right direction
 	if vel.x > 0:
 		sprite.flip_h = false
 	elif vel.x < 0:

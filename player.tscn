@@ -26,9 +26,9 @@ animations = [ {
 "name": "idel",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 7 ), ExtResource( 13 ), ExtResource( 8 ) ],
-"loop": true,
-"name": "walk",
+"frames": [ ExtResource( 5 ), ExtResource( 2 ), ExtResource( 1 ), ExtResource( 4 ) ],
+"loop": false,
+"name": "jump",
 "speed": 8.0
 }, {
 "frames": [ ExtResource( 3 ) ],
@@ -36,9 +36,9 @@ animations = [ {
 "name": "squat",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 5 ), ExtResource( 2 ), ExtResource( 1 ), ExtResource( 4 ) ],
+"frames": [ ExtResource( 6 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 7 ), ExtResource( 13 ), ExtResource( 8 ) ],
 "loop": true,
-"name": "jump",
+"name": "walk",
 "speed": 8.0
 } ]
 
@@ -54,4 +54,5 @@ shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )
-animation = "walk"
+animation = "jump"
+frame = 3
