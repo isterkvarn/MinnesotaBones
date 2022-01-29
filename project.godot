@@ -14,6 +14,10 @@ config/name="Minnesota Bones"
 run/main_scene="res://main.tscn"
 config/icon="res://icon.png"
 
+[global]
+
+gravity=false
+
 [input]
 
 move_left={
