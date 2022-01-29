@@ -53,4 +53,4 @@ func _process(delta):
 	elif vel.x < 0:
 		sprite.flip_h = true
 
-	move_and_slide(vel, Vector2.UP)
+	move_and_slide(vel, Vector2.UP, false, 4, 0.785398, false)
