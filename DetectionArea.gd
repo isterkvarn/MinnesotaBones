@@ -3,7 +3,7 @@ extends Area2D
 var is_touched : bool = false
 var destroy_counter : float = 0.0
 # The delay before the block should be destroyed
-const DESTROY_TIME : int = 3
+const DESTROY_TIME : int = 2
 
 onready var falling_block = get_parent()
 
@@ -15,7 +15,6 @@ func _process(delta):
 		if destroy_counter > DESTROY_TIME:
 			falling_block.destroy()
 		else:
-			print(destroy_counter)
 			destroy_counter += delta
 
 func _on_body_entered(body):
