@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 const move_speed = 200
-const jump_force = 500
+const jump_force = 400
 const gravity = 20
 var vel = Vector2(0, 0)
 
@@ -25,7 +25,7 @@ func _process(delta):
 		vel.x = move_speed
 		
 	# play right animationdepending on movement
-	if is_on_floor():
+	if is_on_floor() or (is_on_wall() and vel.y == 0):
 		if vel.length() > 0:
 			sprite.play("walk")
 		else:
