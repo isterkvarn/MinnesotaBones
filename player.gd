@@ -25,6 +25,7 @@ func _process(delta):
 		vel.x = move_speed
 		
 	# play right animationdepending on movement
+	print("Floor: ", is_on_floor(), "  Wall: ", is_on_wall())
 	if is_on_floor():
 		if vel.length() > 0:
 			sprite.play("walk")
