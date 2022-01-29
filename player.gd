@@ -25,7 +25,7 @@ func _process(delta):
 		vel.x = move_speed
 		
 	# play right animationdepending on movement
-	print("Floor: ", is_on_floor(), "  Wall: ", is_on_wall())
+	#print("Floor: ", is_on_floor(), "  Wall: ", is_on_wall())
 	if is_on_floor():
 		if vel.length() > 0:
 			sprite.play("walk")
@@ -70,4 +70,4 @@ func _process(delta):
 		var collision = get_slide_collision(i)
 		# If the collision is a body, apply an impulse force to it
 		if collision.collider.is_in_group("bodies"):
-			collision.collider.apply_central_impulse(-collision.normal * vel.length() * 0.2)
+			collision.collider.apply_central_impulse(-collision.normal * 20)
