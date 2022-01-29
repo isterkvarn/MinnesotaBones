@@ -4,6 +4,7 @@ const move_speed = 200
 const jump_force = 400
 const gravity = 20
 var vel = Vector2(0, 0)
+var dead = false
 
 onready var sprite = $AnimatedSprite
 
@@ -77,3 +78,12 @@ func _physics_process(delta):
 		# If the collision is a body, apply an impulse force to it
 		if collision.collider.is_in_group("bodies"):
 			collision.collider.apply_central_impulse(-collision.normal * 20)
+
+func die():
+	if !dead:
+		var camera = $Camera2D
+		remove_child(camera)
+		get_parent().add_child(camera)
+		camera.global_position = self.global_position
+		queue_free()
+		dead = true
