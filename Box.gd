@@ -1,6 +1,6 @@
 extends RigidBody2D
 
-const gravity : int = 7
+const gravity : int = 10
 
 func _ready():
 	# Make the box not able to rotate
