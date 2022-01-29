@@ -54,3 +54,9 @@ func _process(delta):
 		sprite.flip_h = true
 
 	move_and_slide(vel, Vector2.UP, false, 4, 0.785398, false)
+
+	for i in get_slide_count():
+		var collision = get_slide_collision(i)
+		if collision.collider.is_in_group("bodies"):
+			print("body")
+			collision.collider.apply_central_impulse(-collision.normal * 100)
