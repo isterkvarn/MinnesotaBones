@@ -13,7 +13,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _physics_process(delta):
 	# Nullify previous movement
 	vel.x = 0
 	
@@ -25,7 +25,6 @@ func _process(delta):
 		vel.x = move_speed
 		
 	# play right animationdepending on movement
-	print("Floor: ", is_on_floor(), "  Wall: ", is_on_wall())
 	if is_on_floor():
 		if vel.length() > 0:
 			sprite.play("walk")
@@ -37,7 +36,17 @@ func _process(delta):
 	else:
 		# gravity and jump anmi if in air
 		vel.y += gravity
-		sprite.play("jump")
+		
+		# Fixws bug where player flips animations on walls
+		if is_on_wall():
+			if vel.length() > 0:
+				sprite.play("walk")
+			else:
+				sprite.play("idel")
+				sprite.frame = 0
+		# if no floor or wall collison play jump
+		else:
+			sprite.play("jump")
 	
 	# Squat and stop player while holding jump
 	if Input.is_action_pressed("jump") and is_on_floor():
@@ -60,10 +69,7 @@ func _process(delta):
 		if Input.is_action_pressed("move_right"):
 			sprite.flip_h = false
 			
-			
 	move_and_slide(vel, Vector2.UP, false, 4, 0.785398, false)
-	
-	#is_on_floor(), is_on_wall()
 	
 	# Check every object that is currently colliding with the player
 	for i in get_slide_count():
