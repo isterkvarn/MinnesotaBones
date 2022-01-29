@@ -540,6 +540,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 3/z_index = 0
 
 [node name="TileMap" type="TileMap"]
+z_index = -2
 tile_set = SubResource( 1 )
 cell_size = Vector2( 16, 16 )
 cell_custom_transform = Transform2D( 4, 0, 0, 4, 0, 0 )
