@@ -6,6 +6,7 @@ const gravity = 20
 var vel = Vector2(0, 0)
 var dead = false
 const death_particles = preload("res://death_particles.tscn")
+var cheating = true
 
 onready var sprite = $AnimatedSprite
 
@@ -56,7 +57,7 @@ func _physics_process(delta):
 		sprite.play("squat")
 		
 	# Jump when button is released
-	if Input.is_action_just_released("jump") and is_on_floor():
+	if Input.is_action_just_released("jump") and (is_on_floor() or cheating):
 		vel.y -= jump_force
 		
 	# Flip sprite in right direction
