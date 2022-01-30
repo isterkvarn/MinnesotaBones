@@ -12,16 +12,15 @@ func _physics_process(delta):
 	if going:
 		$sprites.visible = true
 		self.position.x -= delta*speed
-	
-	if !start_boxes_removed:
-		start_boxes_removed = true
-		var boxes = get_tree().get_nodes_in_group("start_boxes")
 		
-		for box in boxes:
-			box.queue_free()
+		if !start_boxes_removed:
+			start_boxes_removed = true
+			var boxes = get_tree().get_nodes_in_group("start_boxes")
 			
-		var lights = get_tree().get_nodes_in_group("start_light")
-		
-		for light in lights:
-			light.visible = true
-	
+			for box in boxes:
+				box.queue_free()
+				
+			var lights = get_tree().get_nodes_in_group("start_light")
+			
+			for light in lights:
+				light.visible = true
