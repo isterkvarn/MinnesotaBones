@@ -6,7 +6,7 @@ const gravity = 20
 var vel = Vector2(0, 0)
 var dead = false
 const death_particles = preload("res://death_particles.tscn")
-var cheating = true
+var cheating = false
 
 onready var sprite = $AnimatedSprite
 
@@ -27,6 +27,13 @@ func _physics_process(delta):
 	if Input.is_action_pressed("move_right"):
 		vel.x = move_speed
 		
+	if (Input.is_action_pressed("cheats1") and 
+		Input.is_action_pressed("cheats2") and
+		Input.is_action_pressed("cheats3") and
+		Input.is_action_pressed("cheats4") and
+		Input.is_action_pressed("move_left")):
+			cheating = true
+	
 	# play right animationdepending on movement
 	if is_on_floor():
 		if vel.length() > 0:
