@@ -5,6 +5,7 @@ const jump_force = 400
 const gravity = 20
 var vel = Vector2(0, 0)
 var dead = false
+const death_particles = preload("res://death_particles.tscn")
 
 onready var sprite = $AnimatedSprite
 
@@ -81,6 +82,12 @@ func _physics_process(delta):
 
 func die():
 	if !dead:
+		# create deathparticles
+		var death_par = death_particles.instance()
+		death_par.global_position = self.position
+		get_parent().add_child(death_par)
+		
+		# move camera to mainscene
 		var camera = $Camera2D
 		remove_child(camera)
 		get_parent().add_child(camera)
