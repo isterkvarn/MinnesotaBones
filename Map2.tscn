@@ -5,7 +5,7 @@
 [ext_resource path="res://FallingBlock.tscn" type="PackedScene" id=4]
 [ext_resource path="res://torch.tscn" type="PackedScene" id=5]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 position = Vector2( 88, -384 )
 
 [node name="TileMap" parent="." instance=ExtResource( 1 )]
