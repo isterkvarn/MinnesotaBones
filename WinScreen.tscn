@@ -41,7 +41,7 @@ margin_bottom = 120.0
 custom_colors/font_color = Color( 1, 0.717647, 0.113725, 1 )
 custom_fonts/font = ExtResource( 2 )
 custom_styles/normal = SubResource( 1 )
-text = "RESTART"
+text = "Quit"
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -51,8 +51,15 @@ __meta__ = {
 margin_right = 40.0
 margin_bottom = 14.0
 custom_fonts/font = ExtResource( 1 )
-text = "After enduring many hardships, Minnesota Bones finally managed to get ahold of his 
-highly sought-after crypto-keys bla bla bla"
+text = "After enduring many hardships, Minnesota Bones finally managed to 
+get ahold of his highly sought-after crypto-wallet. 
+The moment he had been waiting for for an age was finally here.
+He arose once again to the surface, with a gentle breeze hitting his bony body,
+and looked back at the crypt with the hint of a slight smile on his face.
+As he was taking a final look at his ancient resting place, 
+a sudden wave of panic washed over him.
+After millenia spent down in the crypt, he had forgotten his passwords.
+"
 align = 1
 valign = 1
 __meta__ = {

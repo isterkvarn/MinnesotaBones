@@ -38,6 +38,11 @@ __meta__ = {
 margin_right = 40.0
 margin_bottom = 14.0
 custom_fonts/font = ExtResource( 1 )
+text = "For eons, Minnesota Bones has been laying in a deep slumber
+while his loyal slaves mined away in the crypt. 
+But in his sleep, he was corpse-napped away from his resting place, 
+and brought into an unfamiliar, hostile world.
+Now he returns to reclaim his lost treasure, unaware of what lurks in the deep..."
 align = 1
 valign = 1
 __meta__ = {

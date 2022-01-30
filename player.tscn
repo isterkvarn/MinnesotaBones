@@ -28,6 +28,11 @@ animations = [ {
 "name": "idel",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 6 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 7 ), ExtResource( 13 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "walk",
+"speed": 8.0
+}, {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
 "name": "squat",
@@ -37,11 +42,6 @@ animations = [ {
 "loop": false,
 "name": "jump",
 "speed": 8.0
-}, {
-"frames": [ ExtResource( 6 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 7 ), ExtResource( 13 ), ExtResource( 8 ) ],
-"loop": true,
-"name": "walk",
-"speed": 8.0
 } ]
 
 [node name="Node2D" type="KinematicBody2D" groups=["player"]]
@@ -49,6 +49,7 @@ z_index = 1
 script = ExtResource( 14 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
+current = true
 zoom = Vector2( 0.5, 0.5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
