@@ -57,77 +57,76 @@ position = Vector2( 0, -1408 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="sprites"]
 position = Vector2( 16, 0 )
 frames = SubResource( 1 )
-frame = 1
+frame = 7
 playing = true
 offset = Vector2( -16, 0 )
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="sprites"]
 position = Vector2( 16, 128 )
 frames = SubResource( 1 )
-frame = 4
+frame = 1
 playing = true
 offset = Vector2( -16, 0 )
 
 [node name="AnimatedSprite3" type="AnimatedSprite" parent="sprites"]
 position = Vector2( 16, 256 )
 frames = SubResource( 1 )
-frame = 7
+frame = 4
 playing = true
 offset = Vector2( -16, 0 )
 
 [node name="AnimatedSprite4" type="AnimatedSprite" parent="sprites"]
 position = Vector2( 16, 384 )
 frames = SubResource( 1 )
-frame = 6
+frame = 3
 playing = true
 offset = Vector2( -16, 0 )
 
 [node name="AnimatedSprite5" type="AnimatedSprite" parent="sprites"]
 position = Vector2( 16, 512 )
 frames = SubResource( 1 )
-frame = 5
+frame = 2
 playing = true
 offset = Vector2( -16, 0 )
 
 [node name="AnimatedSprite6" type="AnimatedSprite" parent="sprites"]
 position = Vector2( 16, -128 )
 frames = SubResource( 1 )
-frame = 2
+frame = 8
 playing = true
 offset = Vector2( -16, 0 )
 
 [node name="AnimatedSprite7" type="AnimatedSprite" parent="sprites"]
 position = Vector2( 16, -256 )
 frames = SubResource( 1 )
-frame = 7
+frame = 4
 playing = true
 offset = Vector2( -16, 0 )
 
 [node name="AnimatedSprite8" type="AnimatedSprite" parent="sprites"]
 position = Vector2( 16, -384 )
 frames = SubResource( 1 )
-frame = 6
+frame = 3
 playing = true
 offset = Vector2( -16, 0 )
 
 [node name="AnimatedSprite9" type="AnimatedSprite" parent="sprites"]
 position = Vector2( 16, -512 )
 frames = SubResource( 1 )
-frame = 4
+frame = 1
 playing = true
 offset = Vector2( -16, 0 )
 
 [node name="AnimatedSprite10" type="AnimatedSprite" parent="sprites"]
 position = Vector2( 16, -640 )
 frames = SubResource( 1 )
-frame = 3
 playing = true
 offset = Vector2( -16, 0 )
 
 [node name="AnimatedSprite11" type="AnimatedSprite" parent="sprites"]
 position = Vector2( 16, -768 )
 frames = SubResource( 1 )
-frame = 1
+frame = 7
 playing = true
 offset = Vector2( -16, 0 )
 
@@ -139,77 +138,77 @@ texture = ExtResource( 5 )
 [node name="AnimatedSprite12" type="AnimatedSprite" parent="sprites"]
 position = Vector2( 16, 1408 )
 frames = SubResource( 1 )
-frame = 1
+frame = 7
 playing = true
 offset = Vector2( -16, 0 )
 
 [node name="AnimatedSprite13" type="AnimatedSprite" parent="sprites"]
 position = Vector2( 16, 1536 )
 frames = SubResource( 1 )
-frame = 4
+frame = 1
 playing = true
 offset = Vector2( -16, 0 )
 
 [node name="AnimatedSprite14" type="AnimatedSprite" parent="sprites"]
 position = Vector2( 16, 1664 )
 frames = SubResource( 1 )
-frame = 6
+frame = 3
 playing = true
 offset = Vector2( -16, 0 )
 
 [node name="AnimatedSprite15" type="AnimatedSprite" parent="sprites"]
 position = Vector2( 16, 1792 )
 frames = SubResource( 1 )
-frame = 6
+frame = 3
 playing = true
 offset = Vector2( -16, 0 )
 
 [node name="AnimatedSprite16" type="AnimatedSprite" parent="sprites"]
 position = Vector2( 16, 1920 )
 frames = SubResource( 1 )
-frame = 5
+frame = 2
 playing = true
 offset = Vector2( -16, 0 )
 
 [node name="AnimatedSprite17" type="AnimatedSprite" parent="sprites"]
 position = Vector2( 16, 1280 )
 frames = SubResource( 1 )
-frame = 2
+frame = 8
 playing = true
 offset = Vector2( -16, 0 )
 
 [node name="AnimatedSprite18" type="AnimatedSprite" parent="sprites"]
 position = Vector2( 16, 1152 )
 frames = SubResource( 1 )
-frame = 7
+frame = 4
 playing = true
 offset = Vector2( -16, 0 )
 
 [node name="AnimatedSprite19" type="AnimatedSprite" parent="sprites"]
 position = Vector2( 16, 1024 )
 frames = SubResource( 1 )
-frame = 6
+frame = 3
 playing = true
 offset = Vector2( -16, 0 )
 
 [node name="AnimatedSprite20" type="AnimatedSprite" parent="sprites"]
 position = Vector2( 16, 896 )
 frames = SubResource( 1 )
-frame = 4
+frame = 1
 playing = true
 offset = Vector2( -16, 0 )
 
 [node name="AnimatedSprite21" type="AnimatedSprite" parent="sprites"]
 position = Vector2( 16, 768 )
 frames = SubResource( 1 )
-frame = 2
+frame = 8
 playing = true
 offset = Vector2( -16, 0 )
 
 [node name="AnimatedSprite22" type="AnimatedSprite" parent="sprites"]
 position = Vector2( 16, 640 )
 frames = SubResource( 1 )
-frame = 1
+frame = 7
 playing = true
 offset = Vector2( -16, 0 )
 
@@ -235,6 +234,7 @@ shape = SubResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Usb"]
 frames = SubResource( 4 )
+frame = 1
 playing = true
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
