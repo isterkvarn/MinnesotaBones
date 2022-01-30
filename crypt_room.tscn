@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://tilemap.tscn" type="PackedScene" id=1]
-[ext_resource path="res://player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://server_anim.tscn" type="PackedScene" id=3]
 [ext_resource path="res://grave.tscn" type="PackedScene" id=4]
 [ext_resource path="res://torch.tscn" type="PackedScene" id=5]
@@ -51,43 +50,40 @@ default_color = Color( 0, 0, 0, 1 )
 
 [node name="AnimatedSprite2" parent="servers" instance=ExtResource( 3 )]
 position = Vector2( 225, -64 )
-frame = 0
+frame = 4
 speed_scale = 0.5
 
 [node name="AnimatedSprite3" parent="servers" instance=ExtResource( 3 )]
 position = Vector2( 270, -64 )
-frame = 5
+frame = 4
 speed_scale = 0.8
 
 [node name="AnimatedSprite4" parent="servers" instance=ExtResource( 3 )]
 position = Vector2( 315, -64 )
-frame = 7
+frame = 0
 speed_scale = 0.9
 
 [node name="AnimatedSprite5" parent="servers" instance=ExtResource( 3 )]
 position = Vector2( 360, -64 )
-frame = 3
+frame = 7
 
 [node name="servers2" type="Node2D" parent="."]
 
 [node name="AnimatedSprite2" parent="servers2" instance=ExtResource( 3 )]
 position = Vector2( 225, -64 )
-frame = 0
+frame = 4
 speed_scale = 0.5
 
 [node name="AnimatedSprite3" parent="servers2" instance=ExtResource( 3 )]
 position = Vector2( 270, -64 )
-frame = 4
+frame = 3
 speed_scale = 0.8
 
 [node name="AnimatedSprite4" parent="servers2" instance=ExtResource( 3 )]
 position = Vector2( 315, -64 )
-frame = 7
+frame = 0
 speed_scale = 0.9
 
 [node name="AnimatedSprite5" parent="servers2" instance=ExtResource( 3 )]
 position = Vector2( 360, -64 )
-frame = 3
-
-[node name="Node2D" parent="." instance=ExtResource( 2 )]
-position = Vector2( 145, -58 )
+frame = 7

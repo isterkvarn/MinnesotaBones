@@ -234,7 +234,7 @@ shape = SubResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Usb"]
 frames = SubResource( 4 )
-frame = 4
+frame = 7
 playing = true
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]

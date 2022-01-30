@@ -109,5 +109,5 @@ func die():
 		remove_child(runmusic)
 		get_parent().add_child(runmusic)
 		
-		queue_free()
 		dead = true
+		queue_free()
