@@ -3,7 +3,6 @@ extends Node2D
 onready var menu_button = $"MenuButton"
 onready var background = $"Background"
 onready var text = $"Text"
-onready var title = $"Title"
 
 func _process(delta):
 	scaleElements()
@@ -16,11 +15,8 @@ func scaleElements():
 	background.margin_bottom = get_viewport().size.y
 
 	text.rect_size.x = get_viewport().size.x
-	text.rect_size.y = get_viewport().size.y * 0.8
-	
-	title.rect_size.x = get_viewport().size.x
-	title.rect_size.y = get_viewport().size.y * 0.3
-	
+	text.rect_size.y = get_viewport().size.y * 0.7
+
 	# Scale the menu button accordingly
 	menu_button.margin_right = get_viewport().size.x * 0.7
 	menu_button.margin_left = get_viewport().size.x * 0.3
