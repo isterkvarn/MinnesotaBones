@@ -23,16 +23,6 @@ height = 42.0
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 9 ) ],
-"loop": true,
-"name": "idel",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 3 ) ],
-"loop": true,
-"name": "squat",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 5 ), ExtResource( 2 ), ExtResource( 1 ), ExtResource( 4 ) ],
 "loop": false,
 "name": "jump",
@@ -42,6 +32,16 @@ animations = [ {
 "loop": true,
 "name": "walk",
 "speed": 8.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "squat",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "idel",
+"speed": 5.0
 } ]
 
 [node name="Node2D" type="KinematicBody2D" groups=["player"]]
@@ -49,6 +49,7 @@ z_index = 1
 script = ExtResource( 14 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
+current = true
 zoom = Vector2( 0.5, 0.5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -727,7 +727,7 @@ visible = false
 position = Vector2( -376, -752 )
 
 [node name="Node2D" parent="." instance=ExtResource( 1 )]
-position = Vector2( 304, -352 )
+position = Vector2( 240, -368 )
 
 [node name="WinArea" parent="." instance=ExtResource( 7 )]
 position = Vector2( -408, -784 )
