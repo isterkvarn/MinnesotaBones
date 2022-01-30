@@ -88,6 +88,10 @@ func _physics_process(delta):
 		if collision.collider.is_in_group("bodies"):
 			collision.collider.apply_central_impulse(-collision.normal * 20)
 
+func play_runmusic():
+	$runmusic.playing = true
+	$cavemusic.playing = false
+
 func die():
 	if !dead:
 		# create deathparticles
@@ -100,5 +104,10 @@ func die():
 		remove_child(camera)
 		get_parent().add_child(camera)
 		camera.global_position = self.global_position
+		
+		var runmusic = $runmusic
+		remove_child(runmusic)
+		get_parent().add_child(runmusic)
+		
 		dead = true
 		queue_free()

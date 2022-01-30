@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://assets/bones sprites/bones_jump4.png" type="Texture" id=1]
 [ext_resource path="res://assets/bones sprites/bones_jump3.png" type="Texture" id=2]
@@ -14,6 +14,8 @@
 [ext_resource path="res://assets/bones sprites/bones_walk4.png" type="Texture" id=12]
 [ext_resource path="res://assets/bones sprites/bones_walk6.png" type="Texture" id=13]
 [ext_resource path="res://player.gd" type="Script" id=14]
+[ext_resource path="res://assets/music/Minnesota bones - explore.mp3" type="AudioStream" id=15]
+[ext_resource path="res://assets/music/Minnesota bones - run.mp3" type="AudioStream" id=16]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 11.0
@@ -47,7 +49,6 @@ z_index = 1
 script = ExtResource( 14 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-current = true
 zoom = Vector2( 0.5, 0.5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -57,3 +58,10 @@ shape = SubResource( 1 )
 frames = SubResource( 2 )
 animation = "jump"
 frame = 3
+
+[node name="runmusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 16 )
+
+[node name="cavemusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 15 )
+autoplay = true

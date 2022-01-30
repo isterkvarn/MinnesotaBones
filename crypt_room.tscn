@@ -50,38 +50,40 @@ default_color = Color( 0, 0, 0, 1 )
 
 [node name="AnimatedSprite2" parent="servers" instance=ExtResource( 3 )]
 position = Vector2( 225, -64 )
+frame = 4
 speed_scale = 0.5
 
 [node name="AnimatedSprite3" parent="servers" instance=ExtResource( 3 )]
 position = Vector2( 270, -64 )
-frame = 6
+frame = 4
 speed_scale = 0.8
 
 [node name="AnimatedSprite4" parent="servers" instance=ExtResource( 3 )]
 position = Vector2( 315, -64 )
-frame = 2
+frame = 0
 speed_scale = 0.9
 
 [node name="AnimatedSprite5" parent="servers" instance=ExtResource( 3 )]
 position = Vector2( 360, -64 )
-frame = 0
+frame = 7
 
 [node name="servers2" type="Node2D" parent="."]
 
 [node name="AnimatedSprite2" parent="servers2" instance=ExtResource( 3 )]
 position = Vector2( 225, -64 )
+frame = 4
 speed_scale = 0.5
 
 [node name="AnimatedSprite3" parent="servers2" instance=ExtResource( 3 )]
 position = Vector2( 270, -64 )
-frame = 5
+frame = 3
 speed_scale = 0.8
 
 [node name="AnimatedSprite4" parent="servers2" instance=ExtResource( 3 )]
 position = Vector2( 315, -64 )
-frame = 2
+frame = 0
 speed_scale = 0.9
 
 [node name="AnimatedSprite5" parent="servers2" instance=ExtResource( 3 )]
 position = Vector2( 360, -64 )
-frame = 0
+frame = 7
