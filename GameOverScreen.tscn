@@ -6,7 +6,7 @@
 [ext_resource path="res://Label.gd" type="Script" id=4]
 [ext_resource path="res://ColorRect.gd" type="Script" id=5]
 [ext_resource path="res://StartScreen.gd" type="Script" id=6]
-[ext_resource path="res://Button.gd" type="Script" id=7]
+[ext_resource path="res://StartGameButton.gd" type="Script" id=7]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.184314, 0.184314, 0.184314, 1 )
