@@ -5,6 +5,8 @@ const jump_force = 400
 const gravity = 20
 var vel = Vector2(0, 0)
 var dead = false
+const death_particles = preload("res://death_particles.tscn")
+var cheating = false
 
 onready var sprite = $AnimatedSprite
 
@@ -25,6 +27,13 @@ func _physics_process(delta):
 	if Input.is_action_pressed("move_right"):
 		vel.x = move_speed
 		
+	if (Input.is_action_pressed("cheats1") and 
+		Input.is_action_pressed("cheats2") and
+		Input.is_action_pressed("cheats3") and
+		Input.is_action_pressed("cheats4") and
+		Input.is_action_pressed("move_left")):
+			cheating = true
+	
 	# play right animationdepending on movement
 	if is_on_floor():
 		if vel.length() > 0:
@@ -55,7 +64,7 @@ func _physics_process(delta):
 		sprite.play("squat")
 		
 	# Jump when button is released
-	if Input.is_action_just_released("jump") and is_on_floor():
+	if Input.is_action_just_released("jump") and (is_on_floor() or cheating):
 		vel.y -= jump_force
 		
 	# Flip sprite in right direction
@@ -81,6 +90,12 @@ func _physics_process(delta):
 
 func die():
 	if !dead:
+		# create deathparticles
+		var death_par = death_particles.instance()
+		death_par.global_position = self.position
+		get_parent().add_child(death_par)
+		
+		# move camera to mainscene
 		var camera = $Camera2D
 		remove_child(camera)
 		get_parent().add_child(camera)

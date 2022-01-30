@@ -7,4 +7,5 @@ func _ready():
 func _on_body_entered(body):
 	if body.is_in_group("player"):
 		get_parent().going = true
+		queue_free()
 #	pass

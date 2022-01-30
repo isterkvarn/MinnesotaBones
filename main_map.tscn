@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Map2.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Map1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://crypt_room.tscn" type="PackedScene" id=3]
 
 [node name="main_map" type="Node2D"]
 
@@ -9,3 +10,6 @@
 
 [node name="map2" parent="." instance=ExtResource( 1 )]
 position = Vector2( 6480, 864 )
+
+[node name="crypt_room" parent="." instance=ExtResource( 3 )]
+position = Vector2( 8600, 976 )
