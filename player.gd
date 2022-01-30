@@ -100,5 +100,5 @@ func die():
 		remove_child(camera)
 		get_parent().add_child(camera)
 		camera.global_position = self.global_position
-		queue_free()
 		dead = true
+		queue_free()

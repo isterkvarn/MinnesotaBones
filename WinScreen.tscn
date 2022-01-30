@@ -1,0 +1,60 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://typwriter.tres" type="DynamicFont" id=1]
+[ext_resource path="res://ButtonFont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://TitleScreenFont2.tres" type="DynamicFont" id=3]
+[ext_resource path="res://ColorRect.gd" type="Script" id=5]
+[ext_resource path="res://WinScreen.gd" type="Script" id=6]
+[ext_resource path="res://Button.gd" type="Script" id=7]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.184314, 0.184314, 0.184314, 1 )
+
+[node name="WinScreen" type="Node2D"]
+script = ExtResource( 6 )
+
+[node name="Title" type="Label" parent="."]
+margin_right = 664.0
+margin_bottom = 200.0
+custom_colors/font_color = Color( 1, 0.717647, 0.113725, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "Minnesota Bones"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="ColorRect" parent="."]
+show_behind_parent = true
+margin_right = 40.0
+margin_bottom = 40.0
+color = Color( 0, 0, 0, 1 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenuButton" type="Button" parent="."]
+margin_right = 344.0
+margin_bottom = 120.0
+custom_colors/font_color = Color( 1, 0.717647, 0.113725, 1 )
+custom_fonts/font = ExtResource( 2 )
+custom_styles/normal = SubResource( 1 )
+text = "RESTART"
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+custom_fonts/font = ExtResource( 1 )
+text = "After enduring many hardships, Minnesota Bones finally managed to get ahold of his 
+highly sought-after crypto-keys bla bla bla"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
