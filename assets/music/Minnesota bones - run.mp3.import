@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Minnesota bones - run.mp3-e51af4159f8ea4623fd89ca6cb2cc0b4.mp3str"
+
+[deps]
+
+source_file="res://assets/music/Minnesota bones - run.mp3"
+dest_files=[ "res://.import/Minnesota bones - run.mp3-e51af4159f8ea4623fd89ca6cb2cc0b4.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

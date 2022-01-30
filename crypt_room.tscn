@@ -56,12 +56,12 @@ speed_scale = 0.5
 
 [node name="AnimatedSprite3" parent="servers" instance=ExtResource( 3 )]
 position = Vector2( 270, -64 )
-frame = 7
+frame = 5
 speed_scale = 0.8
 
 [node name="AnimatedSprite4" parent="servers" instance=ExtResource( 3 )]
 position = Vector2( 315, -64 )
-frame = 4
+frame = 7
 speed_scale = 0.9
 
 [node name="AnimatedSprite5" parent="servers" instance=ExtResource( 3 )]
@@ -77,12 +77,12 @@ speed_scale = 0.5
 
 [node name="AnimatedSprite3" parent="servers2" instance=ExtResource( 3 )]
 position = Vector2( 270, -64 )
-frame = 6
+frame = 4
 speed_scale = 0.8
 
 [node name="AnimatedSprite4" parent="servers2" instance=ExtResource( 3 )]
 position = Vector2( 315, -64 )
-frame = 4
+frame = 7
 speed_scale = 0.9
 
 [node name="AnimatedSprite5" parent="servers2" instance=ExtResource( 3 )]
